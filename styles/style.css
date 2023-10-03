@@ -1,0 +1,1167 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: Programme, Arial, sans-serif;
+}
+
+:root {
+	--main-color: rgb(255, 255, 100);
+	--second-color: #ff1464;
+}
+
+/****************/
+/*HEADER*/
+/****************/
+
+header {
+	background-color: var(--main-color);
+	padding-left: .3em;
+	padding-right: .3em;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 2.5em;
+	position: sticky;
+	top: 0;
+}
+
+header h2 {
+	font-size: medium;
+}
+
+header img {
+	max-width: 7em;
+	height: auto;
+}
+
+header section {
+	display: flex;
+	align-items: center;
+	gap: 1em;
+}
+
+header section h2{
+	display: none;
+}
+
+header a {
+	text-decoration: none;
+	font-size: 0.75rem;
+	font-weight: 400;
+	line-height: 1;
+	letter-spacing: .1em;
+	text-transform: uppercase;
+	color: rgb(0, 0, 0);
+	margin-right: 1em;
+}
+
+header input {
+	display: flex;
+	align-items: center;
+	height: 1.5em;
+}
+
+header section button {
+	background-color: var(--main-color);
+	border: none;
+	margin-left: 1em;
+}
+
+header section button img {
+	max-width: 2em;
+	height: auto;
+	margin-right: -1em;
+}
+
+/****************/
+/*NAV*/
+/****************/
+
+nav {
+	display: grid;
+	grid-template-columns: 9% 82% 9%;
+	grid-template-rows: 5%;
+	background-color: black;
+	color: white;
+	position: fixed;
+	left: 0;
+	top: 2.5em;
+	bottom: 0;
+	right: 0;
+	translate: -100% 0%;
+	transition: translate .3s;
+}
+
+nav.toonMenu {
+	translate: 0% 0%;
+}
+
+nav button {
+	margin-top: 1em;
+	grid-column: 2 / 3;
+	height: 2em;
+	width: 3em;
+
+}
+
+nav ul {
+	grid-column: 2 / 3;
+	list-style: none;
+}
+
+nav ul li a {
+	text-decoration: none;
+	color: white;
+	display: flex;
+	flex-wrap: nowrap;
+	border-bottom: .2em solid white;
+	padding-top: 1em;
+	padding-bottom: 1em;
+}
+
+nav ul li ul {
+	display: flex;
+}
+
+nav ul li ul li a img {
+	max-width: 30%;
+	height: auto;
+
+}
+
+/****************/
+/*Hier begint de het responsive designen*/
+/****************/
+
+@media (min-width: 750px) {
+
+	/****************/
+	/*blok 1*/
+	/****************/
+
+	.blok1 {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		grid-template-rows: 1fr;
+		padding-left: 2em;
+		padding-right: 2em;
+	}
+
+	.blok1 section {
+		grid-column: 1 / 3;
+		padding-right: 1em;
+	}
+
+	.blok1 section p {
+		padding-top: 1em;
+		grid-column: 1 / 3;
+	}
+
+
+	.blok1 section h2 {
+		grid-column: 1 / 3;
+	}
+
+	.blok1 img {
+		width: 100%;
+		height: auto;
+		grid-column-start: 3;
+		grid-column-end: 5;
+	}
+
+	/****************/
+	/*blok 2*/
+	/****************/
+
+	.blok2 {
+		margin-left: -2em;
+	}
+
+	.blok2 ul {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		grid-template-rows: 1fr;
+	}
+
+	.blok2 li:nth-of-type(1) {
+		grid-column: 1 / 2;
+		border-left: none;
+		padding-right: 2em;
+		padding-left: 2em;
+	}
+
+	.blok2 li:nth-of-type(2) {
+		grid-column: 2 / 3;
+		padding-left: 2em;
+		padding-right: 2em;
+	}
+
+	.blok2 li:nth-of-type(3) {
+		grid-column: 3 / 4;
+		padding-left: 2em;
+		padding-right: 2em;
+	}
+
+	.blok2 li:nth-of-type(4) {
+		grid-column: 4 / 5;
+		border-right: none;
+		padding-left: 2em;
+		padding-right: 2em;
+	}
+
+	.blok2 ul li {
+		display: flex;
+		flex-direction: column;
+		border-left: #000 solid .1em;
+		border-right: #000 solid .1em;
+		justify-content: space-between;
+	}
+
+	.blok2 ul li img {
+		order: 3;
+		justify-content: flex-end;
+	}
+
+	/****************/
+	/*blok 3*/
+	/****************/
+
+	.blok3 {
+		display: grid;
+		grid-template-columns: repeat(2, 8%) repeat(2, 1fr) 8% 2%;
+		grid-column-gap: 33px;
+		margin-left: 2em;
+		margin-right: 2em;
+	}
+
+	.blok3 h2 {
+		grid-column: 1 / 3;
+	}
+
+	.blok3 ul {
+		grid-column: 1 / 7;
+	}
+
+	.blok3 ul li img {
+		width: 50%;
+		grid-column: 2 / 3;
+	}
+
+	.blok3 section:nth-of-type(1) {
+		grid-column: 4 / 7;
+		display: flex;
+		justify-content: end;
+	}
+
+	.blok3 section:nth-of-type(2) {
+		grid-column: 1 / 7;
+	}
+
+	/****************/
+	/*blok 4*/
+	/****************/
+
+	.blok4 {
+		display: grid;
+		grid-template-columns: repeat(2, 8%) repeat(4, 1fr) 8% 2%;
+		padding-left: 3em;
+		padding-right: 3em;
+	}
+
+	.blok4 p:nth-of-type(1){
+		grid-column: 1 / 9;
+		text-align: center;
+	}
+
+	.blok4 section:nth-of-type(1) {
+		grid-column: 1 / 9;
+	}
+
+	.blok4 section:nth-of-type(2) {
+		grid-column: 6 / 8;
+		text-align: left;
+		margin-top: -2em;
+		
+	}
+
+	.blok4 section:nth-of-type(3) {
+		grid-column: 4 / 6;
+		
+	}
+
+
+
+	.blok4 video {
+		grid-column: 1 / 6;
+		max-width: 100%;
+
+	}
+
+	/****************/
+	/*blok 5*/
+	/****************/
+
+	.blok5 ul {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		grid-template-rows: 1fr;
+	}
+
+	.blok5 li:nth-of-type(1) {
+		grid-column: 1 / 2;
+		border-left: none;
+		padding-right: 2em;
+		padding-left: 2em;
+	}
+
+	.blok5 li:nth-of-type(2) {
+		grid-column: 2 / 3;
+		padding-left: 2em;
+		padding-right: 2em;
+	}
+
+	.blok5 li:nth-of-type(3) {
+		grid-column: 3 / 4;
+		padding-left: 2em;
+		padding-right: 2em;
+	}
+
+	.blok5 li:nth-of-type(4) {
+		grid-column: 4 / 5;
+		border-right: none;
+		padding-left: 2em;
+		padding-right: 2em;
+	}
+
+	.blok5 ul li {
+		display: flex;
+		flex-direction: column;
+		border-left: #000 solid .1em;
+		border-right: #000 solid .1em;
+		justify-content: space-between;
+	}
+
+	.blok5 ul li img {
+		order: 3;
+		justify-content: flex-end;
+	}
+
+	/****************/
+	/*blok 6*/
+	/****************/
+
+	.blok6 {
+		display: grid;
+		grid-template-columns: 9% 16% 5.9% 16% 5.9% 16% 5.9% 16% 9%;
+		margin-left: 2em;
+		margin-right: 2em;
+	}
+
+	.blok6 section h2 {
+		grid-column: 1 / 3;
+	}
+
+	.blok6 section p {
+		grid-column: 3 / 5;
+	}
+
+	.blok6 ul {
+		grid-column: 1 / 7;
+	}
+
+	.blok6 ul li img {
+		width: 50%;
+		grid-column: 2 / 3;
+	}
+
+	.blok6 section:nth-of-type(1) {
+		grid-column: 4 / 7;
+		text-align: center;
+	}
+
+	.blok6 section:nth-of-type(2) {
+		grid-column: 1 / 7;
+	}
+
+	.blok6 section:nth-of-type(3) {
+		grid-column: 3 / 5;
+
+		display: flex;
+		justify-content: center;
+	}
+
+	.blok6 button:nth-of-type(1) {
+		max-width: 50em;
+		display: flex;
+		justify-content: center;
+	}
+
+	.blok6 section:nth-of-type(1) p {
+		display: flex;
+		justify-content: center;
+	}
+
+	.blok6 button {
+		grid-column: 3 / 5;
+	}
+
+	/****************/
+	/*footer*/
+	/****************/
+	footer {
+		padding: 3em;
+		grid-template-columns: none;
+	}
+}
+
+/****************/
+/*Geeft wat meer padding aan de zijkanten voor meer ruimte*/
+/****************/
+
+@media (min-width: 1000px) {
+
+	main .blok1 {
+		padding-left: 10em;
+		padding-right: 10em;
+	}
+
+	main .blok2 {
+		padding-left: 8em;
+		padding-right: 8em;
+	}
+
+	main .blok3 {
+		padding-left: 8em;
+		padding-right: 8em;
+	}
+
+	main .blok4 {
+		padding-left: 10em;
+		padding-right: 10em;
+	}
+
+	main .blok5 {
+		padding-left: 8em;
+		padding-right: 8em;
+	}
+
+	main .blok6 {
+		padding-left: 8em;
+		padding-right: 8em;
+	}
+
+	main footer {
+		padding-left: 10em;
+		padding-right: 10em;
+	}
+
+	.blog article {
+		padding-left: 15em;
+		padding-right: 15em;
+	}
+
+	.blog ol {
+		padding-left: 15em;
+		padding-right: 15em;
+	}
+}
+
+/****************/
+/*blok 1*/
+/****************/
+
+.blok1 {
+	margin-bottom: 1em;
+	margin: 2em;
+}
+
+.blok1 section {
+	display: grid;
+	grid-template-columns: 9% 82% 9%;
+
+}
+
+.blok1 section h2 {
+	grid-column: 1 / 4;
+	font-size: 200%;
+	font-weight: inherit;
+	margin-top: .5em;
+	margin-bottom: .5em
+}
+
+.blok1 section p:nth-of-type(1) {
+	font-size: 0.75rem;
+	font-weight: 600;
+	line-height: 1;
+	letter-spacing: .1em;
+	text-transform: uppercase;
+	color: rgb(0, 0, 0);
+	grid-column: 1 / 4;
+}
+
+.blok1 section p:nth-of-type(2) {
+	grid-column: 1 / 4;
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+
+.blok1 section section p:nth-of-type(1) {
+	font-size: .75rem;
+	grid-column: 1 / 4;
+}
+
+.blok1 section section p:nth-of-type(2) {
+	color: grey;
+	font-size: .75rem;
+	grid-column: 1 / 4;
+}
+
+
+
+.blok1 img {
+	width: 100%;
+}
+
+/****************/
+/*blok 2*/
+/****************/
+
+.blok2 {
+	display: grid;
+	grid-template-columns: 1fr;
+	margin: 2em;
+}
+
+.blok2 ul {
+	list-style: none;
+}
+
+.blok2 ul li {
+	margin-top: 1em;
+}
+
+.blok2 ul li p:nth-of-type(1) {
+	font-size: 0.75rem;
+	font-weight: 400;
+	line-height: 1;
+	letter-spacing:.1em;
+	text-transform: uppercase;
+	color: rgb(0, 0, 0);
+}
+
+/****************/
+/*verbergt de 2 list items omdat het op mobiel anders te veel zijn. 
+Zodra scherm groter worden gaan ze ipv onder elkaar naast elkaar staan dus is er meer ruimte*/
+/****************/
+
+@media (max-width: 750px) {
+	.blok2 ul li:nth-of-type(n+3) {
+		display: none;
+	}
+}
+
+.blok2 ul li h3 {
+	font-size: 130%;
+	font-weight: inherit;
+	margin-block-start: 1em;
+	margin-block-end: 1em;
+
+}
+
+.blok2 ul li img {
+	max-width: 100%;
+	padding-top: 1em;
+}
+
+.blok2 ul li p:nth-of-type(2) {
+	font-size: 0.75rem;
+}
+
+.blok2 ul li p:nth-of-type(3) {
+	font-size: 0.75rem;
+	color: grey;
+}
+
+/****************/
+/*blok 3*/
+/****************/
+
+.blok3 {
+	margin-top: 1em;
+	margin-bottom: 2em;
+	display:flex;
+	justify-content: center;
+	flex-direction: column;
+	
+}
+
+.blok3 h2 {
+	color: rgb(0, 0, 0);
+	font-size: 3.75rem;
+	text-transform: uppercase;
+	font-weight: bold;
+	line-height: 1;
+	letter-spacing: .1em;
+	text-align: center;
+	grid-column: 	3 / 5;
+}
+
+.blok3 ul {
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+
+.blok3 ul li {
+
+	display: grid;
+	grid-template-columns: 9% 16% 5.9% 16% 5.9% 16% 5.9% 16% 9%;
+	padding-bottom: 1em;
+	padding-top: 1em;
+	border-bottom: 0.15rem solid rgb(233, 233, 233);
+}
+
+.blok3 ul li img {
+	max-width: 100%;
+
+}
+
+.blok3 ul li p {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-weight: bold;
+	font-size: .9em;
+}
+
+.blok3 ul li section h6{
+	font-weight: bold;
+	font-size: .9em;
+}
+
+.blok3 ul li section:nth-of-type(1) {
+	grid-column-start: 4;
+	grid-column-end: 7;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.blok3 ul li section:nth-of-type(1) p {
+	display: flex;
+	justify-content: flex-start;
+}
+
+
+.blok3 ul li section:nth-of-type(2) {
+	grid-column-start: 8;
+	grid-column-end: 9;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+
+.blok3 ul li section img {
+	width: auto;
+	height: 1em;
+	padding: .3em;
+}
+
+.blok3 button {
+	
+	display:block;
+	margin: 0 auto;
+	background-color: white;
+	border: .2em solid black;
+	padding: 1em;
+	margin: 1em;
+
+}
+
+
+
+.blok3 section {
+	display: flex;
+	justify-content: center;
+}
+
+.blok3 button:hover {
+	background-color: black;
+	color: white;
+	transition: .3s;
+}
+
+.blok3 ul li p:nth-of-type(2) {
+	color: grey;
+	font-weight: 200;
+}
+
+/****************/
+/*blok 4*/
+/****************/
+
+.blok4 {
+	background-color: black;
+	color: white;
+	padding-bottom: 1em;
+}
+
+.blok4 section {
+	display: grid;
+	grid-template-columns: 9% 16% 5.9% 16% 5.9% 16% 5.9% 16% 9%;
+	padding-top: 2em;
+}
+
+.blok4 h2 {
+	grid-column-start: 1;
+	grid-column-end: 10;
+	text-align: center;
+	color: rgb(255, 255, 255);
+	font-size: 3.75rem;
+	font-weight: bold;
+	line-height: 1;
+	text-align: center;
+	letter-spacing: .1em;
+	padding-top: 1em;
+}
+
+.blok4 p {
+	grid-column-start: 2;
+	grid-column-end: 9;
+	text-align: center;
+	color: var(--main-color);
+}
+
+.blok4 section p{
+	color: white;
+}
+
+.blok4 section hr {
+	grid-column-start: 2;
+	grid-column-end: 9;
+}
+
+.blok4 section h3 {
+	grid-column-start: 2;
+	grid-column-end: 5;
+	font-size: 2rem;
+	padding-top: .5em;
+	padding-bottom: .5em;
+}
+
+.blok4 video {
+	width: 100%;
+}
+
+.blok4 section:nth-of-type(2) {
+	margin-bottom: 2em;
+	
+}
+
+.blok4 section:nth-of-type(3) {
+	display: flex;
+	justify-content: center;
+	
+}
+
+.blok4 section h4 {
+	grid-column-start: 2;
+	grid-column-end: 9;
+	text-align: center;
+}
+
+.blok4 section p {
+	grid-column-start: 2;
+	grid-column-end: 9;
+	margin-top: 1em;
+}
+
+.blok4 button {
+	grid-column: 4 / 6;
+	color: white;
+	background-color: black;
+	border: .2em solid white;
+	padding: 1em;
+	margin: 1em;
+	display:block;
+	margin: 0 auto;
+
+}
+
+/*********/
+/***blok5***/
+/*********/
+
+.blok5 {
+	display: grid;
+	grid-template-columns: 1fr;
+	margin: 2em;
+}
+
+.blok5 ul {
+	list-style: none;
+}
+
+.blok5 ul li {
+	margin-top: 1em;
+}
+
+.blok5 h2 {
+	color: rgb(0, 0, 0);
+	font-size: 3.75rem;
+	text-transform: uppercase;
+	font-weight: bold;
+	line-height: 1;
+	letter-spacing: .1em;
+	text-align: center;
+}
+
+.blok5 section p {
+	color: var(--second-color);
+	display: flex;
+	justify-content: center;
+}
+
+.blok5 ul li p:nth-of-type(1) {
+
+	font-size: 0.75rem;
+	font-weight: 400;
+	line-height: 1;
+	letter-spacing: .1em;
+	text-transform: uppercase;
+	color: rgb(0, 0, 0);
+}
+
+.blok5 ul li h3 {
+	font-size: 130%;
+	font-weight: inherit;
+	margin-block-start: 1em;
+	margin-block-end: 1em;
+
+}
+
+.blok5 ul li img {
+	max-width: 100%;
+	padding-top: 1em;
+}
+
+.blok5 ul li p:nth-of-type(2) {
+	font-size: 0.75rem;
+}
+
+.blok5 ul li p:nth-of-type(3) {
+	font-size: 0.75rem;
+	color: grey;
+}
+
+/****************/
+/*blok 6*/
+/****************/
+
+.blok6 {
+	margin-top: 1em;
+	margin-bottom: 2em;
+	display: grid;
+	grid-template-columns: 9% 16% 5.9% 16% 5.9% 16% 5.9% 16% 9%;
+}
+
+.blok6 section {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	grid-column: 1 / 12;
+}
+
+.blok6 section:nth-of-type(1) button {
+	max-width: 20em;
+}
+
+.blok6 section div {
+	display: flex;
+	justify-content: center;
+	gap: 1em;
+}
+
+.blok6 h2 {
+	grid-column-start: 1;
+	grid-column-end: 10;
+	color: rgb(0, 0, 0);
+	font-size: 3rem;
+	text-transform: uppercase;
+	font-weight: bold;
+	line-height: 1;
+	text-align: center;
+	letter-spacing: .2em;
+}
+
+.blok6 section p:nth-of-type(1) {
+	color: var(--second-color);
+	text-align: center;
+}
+
+.blok6 ul {
+	margin-top: 1em;
+	margin-bottom: 1em;
+	grid-column: 1 / 12;
+}
+
+.blok6 ul li {
+	display: grid;
+	grid-template-columns: 9% 16% 5.9% 16% 5.9% 16% 5.9% 16% 9%;
+	padding-bottom: 1em;
+	padding-top: 1em;
+	border-bottom: 0.15rem solid rgb(233, 233, 233);
+}
+
+.blok6 ul li img {
+	max-width: 100%;
+
+	border-radius: 50%;
+}
+
+.blok6 ul li p {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-weight: bold;
+	font-size: .9em;
+}
+
+.blok6 ul li section h6{
+	display: flex;
+	justify-content: flex-start;
+	font-weight: bold;
+	font-size: .9em;
+}
+
+.blok6 ul li section:nth-of-type(1) {
+	grid-column-start: 4;
+	grid-column-end: 7;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.blok6 ul li section:nth-of-type(1) p {
+	display: flex;
+	justify-content: flex-start;
+	color: black;
+	font-weight: 500;
+}
+
+.blok6 ul li section:nth-of-type(2) {
+	grid-column-start: 8;
+	grid-column-end: 9;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+
+.blok6 ul li p:nth-of-type(2){
+	color: var(--second-color);
+	grid-column: 8 / 9;
+
+}
+
+.blok6 ul li section img {
+	width: auto;
+	height: 1em;
+	padding: .3em;
+}
+
+.blok6 button {
+	background-color: white;
+	border: .2em solid black;
+	padding: 1em;
+	margin-top: 1em;
+	margin-bottom: 1em;
+	grid-column: 4 / 7;
+}
+
+.blok6 button:hover {
+	background-color: black;
+	color: white;
+	transition: .3s;
+}
+
+.blok6 ul li p:nth-of-type(2) {
+	font-weight: 200;
+	letter-spacing: .1em;
+	text-transform: uppercase;
+}
+
+/****************/
+/*footer*/
+/****************/
+
+footer {
+	background-color: black;
+	color: white;
+	display: grid;
+	grid-template-columns: 9% 16% 5.9% 16% 5.9% 16% 5.9% 16% 9%;
+}
+
+footer h1 {
+	grid-column: 2 / 9;
+	font-size: 2.25rem;
+	font-weight: 100;
+	line-height: 1.125;
+	margin-bottom: 1em;
+	margin-top: 1em;
+}
+
+footer h6{
+	padding-bottom: 1em;
+}
+
+footer a {
+	grid-column: 2 / 9;
+	padding-top: 1em;
+	padding-bottom: 1em;
+}
+
+footer section {
+	grid-column: 2 / 9;
+}
+
+footer section button {
+	background-color: black;
+	border: none;
+	margin-right: 1em;
+}
+
+footer section button img {
+	width: 2em;
+}
+
+footer hr {
+	grid-column: 2 / 9;
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+
+/****************/
+/*Vanaf hier begint de css over de 2de pagina*/
+/****************/
+
+.blog {
+	display: grid;
+	grid-template-columns: 9% 82% 9%;
+	grid-column: 2 / 3;
+}
+
+.blog h1 {
+	grid-column: 2 / 3;
+	color: #000;
+	font-size: 1.75em;
+	font-weight: 100;
+	line-height: 1.1;
+	text-align: center;
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+
+.blog section {
+	grid-column: 2 / 3;
+	gap: 1em;
+}
+
+.blog img {
+	grid-column: 2 / 3;
+	width: 100%;
+	margin-top: 2em;
+	margin-bottom: 2em;
+}
+
+.blog h4 {
+	grid-column: 2 / 3;
+
+}
+
+.blog article {
+	grid-column: 2 / 3;
+}
+
+.blog article h5 {
+	border: .2em solid #99a7ee;
+	font-size: 1em;
+	font-weight: 400;
+	padding: 1.5rem 2.25rem;
+	font: 100 1em/1.65 Programme, Arial, sans-serif;
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+
+.blog article p {
+	padding-top: 1em;
+	color: #333;
+	font: 100 1em/1.65 Programme, Arial, sans-serif;
+}
+
+.blog p:first-of-type {
+	text-align: center;
+	font-weight: 500;
+	grid-column: 2 / 3;
+
+}
+
+.blog article p:first-of-type {
+	text-align: left;
+}
+
+.blog section {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+
+.blog h6 {
+	border: .2em solid black;
+	padding: .5em;
+}
+
+.blog iframe {
+	grid-column: 2 / 3;
+	width: 100%;
+	height: 20em;
+}
+
+.blog h3 {
+	grid-column: 2 / 3;
+	color: #333;
+	font: 100 1em/1.65 Programme, Arial, sans-serif;
+	font-weight: 600;
+	text-align: center;
+	font-size: .9em;
+	margin-top: 2em;
+	margin-bottom: 1em;
+}
+
+.blog ol {
+	grid-column: 2 / 3;
+	text-decoration: underline;
+	margin-bottom: 2em;
+
+}
+
+.blog ol li {
+	margin: .5em;
+}
+
+.blog footer {
+	grid-column: 1 / 4;
+}
+
+.blog footer h5{
+	color: black;
+}
+
+.blog footer section button img {
+	width: 2em;
+}
